@@ -34,5 +34,14 @@ module.exports = {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'no-console': ['warn', { allow: ['warn', 'error'] }],
+    // 限制单个文件最大行数为 600 行
+    'max-lines': [
+      'error',
+      {
+        max: 600,
+        skipBlankLines: true, // 跳过空白行
+        skipComments: true, // 跳过注释行
+      },
+    ],
   },
 };
