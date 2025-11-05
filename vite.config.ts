@@ -20,6 +20,17 @@ export default defineConfig({
       '@/utils': path.resolve(__dirname, './src/utils'),
     },
   },
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+        modifyVars: {
+          // 这里可以自定义 less 变量，例如 antd 主题变量
+          // '@primary-color': '#1890ff',
+        },
+      },
+    },
+  },
   server: {
     port: 3000,
     host: true,
