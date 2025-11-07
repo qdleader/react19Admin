@@ -203,7 +203,7 @@ git commit -m "docs: 更新 README 文档"
 \`\`\`bash
 VITE_PORT=3000 # 端口号
 VITE_API_BASE_URL=http://localhost:8080 # API 基础地址
-VITE_APP_TITLE=Alpha Account Activation # 应用标题
+VITE_APP_TITLE=QDleader Admin # 应用标题
 VITE_USE_MOCK=false # 是否使用 Mock 数据
 \`\`\`
 

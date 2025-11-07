@@ -2,7 +2,7 @@
 
 ## ✅ 项目信息
 
-**项目名称**: Alpha Account Activation Web  
+**项目名称**: QDleader Admin Web  
 **技术栈**: React 19 + Vite 5 + Redux Toolkit + TypeScript + Ant Design 5  
 **创建时间**: 2024年10月30日  
 **状态**: ✅ 已完成并测试通过

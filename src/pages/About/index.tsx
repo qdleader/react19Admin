@@ -10,7 +10,7 @@ const { Title, Paragraph, Link } = Typography;
 
 const About: React.FC = () => {
   useEffect(() => {
-    document.title = '关于 - Alpha Account Activation';
+    document.title = '关于 - QDleader Admin';
   }, []);
 
   return (
@@ -25,7 +25,7 @@ const About: React.FC = () => {
           </Paragraph>
           <Divider />
           <Descriptions title="项目信息" column={1}>
-            <Descriptions.Item label="项目名称">Alpha Account Activation Web</Descriptions.Item>
+            <Descriptions.Item label="项目名称">QDleader Admin Web</Descriptions.Item>
             <Descriptions.Item label="版本号">1.0.0</Descriptions.Item>
             <Descriptions.Item label="作者">Your Name</Descriptions.Item>
             <Descriptions.Item label="创建时间">2024</Descriptions.Item>

@@ -26,7 +26,7 @@ const DataList: React.FC = () => {
   });
 
   useEffect(() => {
-    document.title = '数据列表 - Alpha Account Activation';
+    document.title = '数据列表 - QDleader Admin';
     fetchData(1, 10);
   }, []);
 

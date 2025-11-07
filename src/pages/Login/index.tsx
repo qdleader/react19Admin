@@ -21,7 +21,7 @@ const Login: React.FC = () => {
   const from = (location.state as any)?.from?.pathname || '/';
 
   useEffect(() => {
-    document.title = '登录 - Alpha Account Activation';
+    document.title = '登录 - QDleader Admin';
     // 如果已登录，直接跳转
     if (isLogin) {
       navigate(from, { replace: true });
@@ -57,7 +57,7 @@ const Login: React.FC = () => {
       >
         <Space direction="vertical" size="large" style={{ width: '100%', textAlign: 'center' }}>
           <Title level={2} style={{ marginBottom: 0 }}>
-            Alpha Account Activation
+            QDleader Admin
           </Title>
           <Text type="secondary">欢迎登录系统</Text>
 

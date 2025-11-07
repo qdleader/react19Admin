@@ -24,7 +24,7 @@ const Home: React.FC = () => {
   const { userInfo } = useAppSelector((state) => state.user);
 
   useEffect(() => {
-    document.title = '首页 - Alpha Account Activation';
+    document.title = '首页 - QDleader Admin';
   }, []);
 
   return (
