@@ -1,6 +1,6 @@
 # qdleader Web
 
-一个基于 React 19 + Vite 5 + Redux Toolkit + TypeScript + Ant Design 5 构建的企业级前端应用模板。
+一个基于 React 19 + Vite 5 + Redux Toolkit + TypeScript + Ant Design 5 + 数据大屏 构建的企业级前端应用模板。
 
 ## ✨ 特性
 
