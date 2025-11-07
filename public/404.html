@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Loading...</title>
+    <script>
+      // GitHub Pages SPA 路由重定向方案
+      // 当访问不存在的路径时，GitHub Pages 会返回 404.html
+      // 此脚本将路径信息保存到 sessionStorage，然后重定向到 index.html
+      sessionStorage.redirect = location.href;
+    </script>
+    <meta http-equiv="refresh" content="0;URL='/react19Admin/'" />
+  </head>
+  <body></body>
+</html>
+
