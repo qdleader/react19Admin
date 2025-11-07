@@ -55,7 +55,10 @@ const MainLayout: React.FC = () => {
 
   // 处理大屏跳转（在新窗口打开）
   const handleOpenDashboard = () => {
-    window.open('/dashboard', '_blank');
+    // 使用相对路径或者从 basename 构建完整路径
+    const basename = import.meta.env.BASE_URL || '/';
+    const dashboardUrl = `${basename}dashboard`.replace(/\/\//g, '/');
+    window.open(dashboardUrl, '_blank');
   };
 
   // 用户下拉菜单
