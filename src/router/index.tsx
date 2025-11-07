@@ -30,6 +30,7 @@ const About = lazy(() => import('@/pages/About'));
 const DataList = lazy(() => import('@/pages/DataList'));
 const Login = lazy(() => import('@/pages/Login'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
+const Dashboard = lazy(() => import('@/pages/Dashboard'));
 
 // 扩展路由对象类型
 export interface AppRouteObject extends Omit<RouteObject, 'children'> {
@@ -81,6 +82,14 @@ const routes: AppRouteObject[] = [
         },
       },
     ],
+  },
+  {
+    path: '/dashboard',
+    element: LazyLoad(Dashboard),
+    meta: {
+      title: '数据大屏',
+      requireAuth: false,
+    },
   },
   {
     path: '/login',

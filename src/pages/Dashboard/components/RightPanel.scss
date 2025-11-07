@@ -1,0 +1,24 @@
+.right-panel {
+  position: absolute;
+  width: 500px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  display: grid;
+  gap: 24px;
+  padding: 111px 0 24px 0;
+  box-sizing: border-box;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  animation: entranceAnimationRight ease-in-out 0.75s forwards;
+}
+
+@keyframes entranceAnimationRight {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 0;
+  }
+}
+

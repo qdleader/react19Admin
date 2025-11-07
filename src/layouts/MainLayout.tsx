@@ -13,6 +13,7 @@ import {
   UserOutlined,
   LogoutOutlined,
   SettingOutlined,
+  DashboardOutlined,
 } from '@ant-design/icons';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { logout } from '@/redux/slices/userSlice';
@@ -51,6 +52,11 @@ const MainLayout: React.FC = () => {
       label: '关于',
     },
   ];
+
+  // 处理大屏跳转（在新窗口打开）
+  const handleOpenDashboard = () => {
+    window.open('/dashboard', '_blank');
+  };
 
   // 用户下拉菜单
   const userMenuItems: MenuProps['items'] = [
@@ -132,23 +138,34 @@ const MainLayout: React.FC = () => {
             boxShadow: '0 1px 4px rgba(0,21,41,.08)',
           }}
         >
-          <Button
-            type="text"
-            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-            onClick={handleToggleCollapsed}
-            style={{
-              fontSize: '16px',
-              width: 64,
-              height: 64,
-            }}
-          />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <Button
+              type="text"
+              icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+              onClick={handleToggleCollapsed}
+              style={{
+                fontSize: '16px',
+                width: 64,
+                height: 64,
+              }}
+            />
+          </div>
 
-          <Dropdown menu={{ items: userMenuItems, onClick: handleUserMenuClick }}>
-            <Space style={{ cursor: 'pointer' }}>
-              <Avatar src={userInfo?.avatar} icon={<UserOutlined />} />
-              <Text>{userInfo?.nickname || userInfo?.username}</Text>
-            </Space>
-          </Dropdown>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <Button
+              type="primary"
+              icon={<DashboardOutlined />}
+              onClick={handleOpenDashboard}
+            >
+              数据大屏
+            </Button>
+            <Dropdown menu={{ items: userMenuItems, onClick: handleUserMenuClick }}>
+              <Space style={{ cursor: 'pointer' }}>
+                <Avatar src={userInfo?.avatar} icon={<UserOutlined />} />
+                <Text>{userInfo?.nickname || userInfo?.username}</Text>
+              </Space>
+            </Dropdown>
+          </div>
         </Header>
 
         {/* 内容区域 */}

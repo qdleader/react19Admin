@@ -1,0 +1,104 @@
+.header {
+  position: absolute;
+  margin: 0 12px;
+  top: 12px;
+  width: calc(100% - 24px);
+  height: 87px;
+  background: url('../assets/images/顶部标题.png') no-repeat center center;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 12px;
+  color: rgba(230, 239, 253);
+  z-index: 100;
+}
+
+.text-carousel {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  width: 744px;
+  height: 43px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    rgba(218, 163, 88, 0),
+    rgba(218, 163, 88, 0.6),
+    rgba(218, 163, 88, 0)
+  );
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  pointer-events: all;
+  z-index: 100;
+
+  &:hover {
+    background: linear-gradient(
+      90deg,
+      rgba(218, 163, 88, 0.1),
+      rgba(218, 163, 88, 0.7),
+      rgba(218, 163, 88, 0.1)
+    );
+  }
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-carousel-item {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+
+  &.carousel-enter {
+    animation: carousel-enter 0.5s ease-in-out;
+  }
+
+  &.carousel-leave {
+    animation: carousel-leave 0.5s ease-in-out;
+  }
+}
+
+@keyframes carousel-enter {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes carousel-leave {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+

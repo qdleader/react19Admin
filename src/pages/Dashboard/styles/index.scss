@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'UniDreamLED';
+  src: url('../assets/fonts/UniDreamLED.ttf') format('truetype');
+}
+
+.dashboard-container {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  color: #fff;
+  background: url('../assets/images/背景.png') no-repeat center center;
+  background-size: 100% 100%;
+  overflow: hidden;
+  
+  * {
+    box-sizing: border-box;
+  }
+}
+
